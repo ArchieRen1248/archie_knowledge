@@ -15,12 +15,21 @@ git log          # 查看提交日志
 git reflog       # 记录每一次提交的信息
 git rm <file>    # 删除对一个文件的跟踪(即从版本库中删除一个文件)
 ```
-# log信息的显示
+# 一些信息的显示
+## log信息的显示
 ```sh
 git log                  # 显示完整提交信息
 git log --pretty=oneline # 每行显示一个提交(commit-id是全写的)
 git log --oneline        # 每行显示一个提交(commit-id是缩写的)
 ```
+## diff信息显示
+```sh
+git diff             # 查看工作区的修改内容
+git diff --staged    # 查看暂存区的修改内容
+git show             # 查看最新commit-id的修改内容
+git show <commit-id> # 查看某个分支的修改内容
+```
+
 # Git的几个区
 - 工作区(Work Area)：写代码的地方。
 - 暂存区(Stage Area)：存放在`.git`文件夹下，暂存对于此仓库的修改。使用`git add`的时候，就是将要提交的所有修改放到暂存区。
